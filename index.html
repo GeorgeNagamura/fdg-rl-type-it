@@ -58,9 +58,9 @@
         <button id="copybtn">Copy to ClipBoard</button>
         <button id="help">Show Help</button>
     </div>
-    <div id="helpDisplay" style="display: none; width: 60%;">
+    <div id="helpDisplay" style="display: none; width: 60%; height: 300px; overflow: auto;">
         <h2>Help</h2>
-        <div style="text-align: justify;"> 
+        <div style="text-align: justify; padding: 10pt;"> 
             <p style=>
                 This is a tool that creates formal representations of the Representational Level for Functional Discourse Grammar (HENGEVELD; MACKENZIE, 2008). Currently, the tool allows representation for any Layer in the Representational Level. Simply <strong>start by</strong> choosing the desired layer at <strong>“select head”</strong> and clicking the <strong>“Add head”</strong> button.
             </p>
@@ -84,7 +84,7 @@
             </p>
             <br>
             <p>
-                This tool is a work in progress and has many limitations. First, it cannot recognize faulty representations, for example, it is possible in this program to create a Propositional Content with a Configurational Property as a head, even though it is not a valid representation in the Grammar. 
+                This tool is a work in progress and has many limitations. First, it cannot recognize faulty representations, for example, it is possible in this program to create a Propositional Content with a lexeme as a head without a Lexical Property, even though this is not a valid representation in the Grammar. 
             </p>
             <p>
                 Second, the order of indexes reflect the order by which they were added and not the linear order of succession in the representation. If the order of indices are wrong you will have to manually correct them (with your text editor of choice) or reset the representation.
@@ -102,6 +102,9 @@
                 <li>Operators selection menu</li>
                 <li>Portuguese translation (Shame, I know...)</li>
             </ul>
+            <br>
+            <h3>References</h3>
+            <p>HENGEVELD, K.; MACKENZIE, J. L. Functional Discourse Grammar: a typologically-based theory of language structure. Oxford: Oxford University Press, 2008.</p>
         </div>
         
     </div>
