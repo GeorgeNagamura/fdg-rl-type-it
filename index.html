@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDG RL TypeIt</title>
+
+</head>
+<body>
+    <h1>Functional Discourse Grammar Semi-Automatic Representation - A.K.A. FDG-RL-Type-It</h1>
+    
+    <div class="controls">
+        <div class="container" style="display: flex; justify-content: space-between; width: 75%;">
+            <div class="headselection" id="select_container">
+                <label for="heads">Select a head</label>
+                <select class="heads" id="heads">
+                    <option value="None">None</option>
+                    <option value="coord">Coordination Frame</option>
+                    <option value="p">Propositional Content</option>
+                    <option value="ep">Episode</option>
+                    <option value="e">State-of-Affairs</option>
+                    <option value="fc">Configurational Property</option>
+                    <option value="x">Individual</option>
+                    <option value="f">Lexical Property</option>
+                    <option value="m">Manner</option>
+                    <option value="l">Location</option>
+                    <option value="t">Time</option>
+                    <option value="q">Quantity</option>
+                    <option value="r">Reason</option>
+                    <option value="lex">Lexeme</option>
+                    
+                </select>
+                <label for="ismod">Add as modifier?</label>
+                <input type="checkbox" id="ismod">
+                <button class="option_btn" id="add_head">Add head</button>
+                 
+            </div>
+            <div class="elements_holder">
+                <div>
+                    Select an added variable to change it:
+                </div>
+                <form class="elements" id="el_table" >
+
+                </form>
+                <div>
+                    Options:
+                </div>
+                <div id="options">
+                </div>
+                <br>
+                <button id="reset">Reset Representation <br> (Warning: not reversable)</button>
+                
+            </div>
+        </div>
+        <div class="representation" id="represent">
+            <div>Your choices resulted in the following representation:</div>
+        </div>
+        <button id="copybtn">Copy to ClipBoard</button>
+        <button id="help">Show Help</button>
+    </div>
+    <div id="helpDisplay" style="display: none; width: 60%;">
+        <h2>Help</h2>
+        <div style="text-align: justify;"> 
+            <p style=>
+                This is a tool that creates formal representations of the Representational Level for Functional Discourse Grammar (HENGEVELD; MACKENZIE, 2008). Currently, the tool allows representation for any Layer in the Representational Level. Simply <strong>start by</strong> choosing the desired layer at <strong>“select head”</strong> and clicking the <strong>“Add head”</strong> button.
+            </p>
+            <p>
+                Once a head is added, its representation will be displayed under the “Select a head” area. On the right side of the screen, the available options for this Layer will be shown. You can now <strong>select a Semantic Role</strong> for this head, or <strong>add an Operator</strong> (consult Hengeveld & Mackenzie (2008) to see which Operators are available for each Layer). Under these options there is also a <strong>“Reset Representation”</strong> button. Clicking this button will erase the current representation and cannot be undone. 
+            </p>
+            <p>
+                After a head is inserted you can <strong>add another head</strong> and so on. The index of each Layer will reflect its order of addition (starting with “i”, then “j”, etc., when a repeated variable is inserted).
+            </p>
+            <p>
+                If you wish to <strong>add a modifier</strong>, first select the variable for which the modifier applies on the right side of the screen, then select the variable that specifies the modifier, then mark the checkbox <strong>“Add as modifier?”</strong> and finally click “Add head”. The modifier head will also be available on the right side for adding a new head to it.
+            </p>
+            <p>
+                This tool also allows for <strong>coordinated</strong> members to be added. To do so, select “Coordination Frame” on the “Select a head” menu, then click “Add head”. This frame is now available on the right side, to receive a new head. After inserting a head on the Coordination Frame, the newly created head will automatically be selected to receive its specifications. In order to <strong>add another member</strong> to the Coordination, select it by clicking on the <strong>round checkbox</strong> (radio checkbox) to the left of the Coordination variable (right side of the screen). After at least two members of the Coordination have been added, it is possible to mark it as an <strong>Alternative Coordination</strong>, by clicking the button <strong>“Alt”</strong> (right side of the Function selection).
+            </p>
+            <p>
+                Finally, any Layer can receive a <strong>Lexical head</strong>. To do so, first select <strong>“Lexeme”</strong> in the “Select a head” menu and a textbox will appear. Type in the box the desired lexeme and then click the “Add head” button.
+            </p>
+            <p>
+                When you are satisfied with the representation, click the <strong>“Copy to Clipboard”</strong> button, and paste it (using the edit command or “ctrl(also command)-v” in your text editor of choice.
+            </p>
+            <br>
+            <p>
+                This tool is a work in progress and has many limitations. First, it cannot recognize faulty representations, for example, it is possible in this program to create a Propositional Content with a Configurational Property as a head, even though it is not a valid representation in the Grammar. 
+            </p>
+            <p>
+                Second, the order of indexes reflect the order by which they were added and not the linear order of succession in the representation. If the order of indices are wrong you will have to manually correct them (with your text editor of choice) or reset the representation.
+            </p>
+            <p>
+                Finally, there may be other specifications you want to add to the representation that are not contemplated here. In this case, e-mail me at genaga.trad@gmail.com and I will see if it is possible to add your desired feature to the program, or if you have any other type of feedback.
+            </p>
+            <br>
+            <h3>Features to be added:</h3>
+            <ul>
+                <li>Save/Load representation</li>
+                <li>Undo button</li>
+                <li>Change variable</li>
+                <li>One click basic frames (for example, Two-Place Configurational Property)</li>
+                <li>Operators selection menu</li>
+                <li>Portuguese translation (Shame, I know...)</li>
+            </ul>
+        </div>
+        
+    </div>
+    <div class="footer" style = "position: fixed;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;">
+        <p>FDG-RL-Type-It created by George H. Nagamura. Contact me at: genaga.trad@gmail.com</p>
+
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
